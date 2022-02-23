@@ -1,0 +1,62 @@
+.logo {
+    background-image: url("logo.png");
+    background-size: 100px 100px;
+    background-repeat: no-repeat;
+    width: 120px;
+    height: 120px;
+    display: inline-block;
+}
+
+.logo:hover {
+    cursor: pointer;
+    background-size: 105px 105px;
+}
+
+.menicon {
+    background-image: url("menicon.png");
+    background-size: 30px 30px;
+    width: 30px;
+    height: 30px;
+    top: 35%;
+    right: 0;
+    position: absolute;
+    display: inline-block;
+}
+
+.body {
+    width: 100%;
+}
+
+.slide {
+    position: absolute;
+    animation-name: slide;
+    animation-duration: 3s;
+    animation-fill-mode: forwards;
+}
+
+.adcontent {
+    display: inline-block;
+    text-align: left;
+    line-height: 30px;
+    font-size: 95px;
+    font-weight: 400;
+    text-transform: uppercase;
+    font-family: 'Barlow Condensed', sans-serif;
+}
+
+#slide1 {
+    max-width: 400px;
+    -ms-transform: translateY(30%);
+    transform: translateY(30%);
+}
+
+#slide1 img {
+    width: 375px;
+    height: 450px;
+    display: inline-block;
+}
+
+@keyframes slide {
+    from {left: -1000px;}
+    to {left: 30%;}
+}
