@@ -51,7 +51,7 @@
             }
 
             @media only screen and (min-width: 1000px) {
-                /* For tablets: */
+                /* For tablets-horizontal: */
                 .logo {background-image: url("logo.png"); background-size: 100px 100px; background-repeat: no-repeat; width: 120px; height: 120px; display: inline-block;}
                 .logo:hover {cursor: pointer;background-size: 105px 105px;}
                 .menicon {background-image: url("menicon.png"); background-size: 30px 30px; width: 30px; height: 30px; -ms-transform: translateY(100%); transform: translateY(100%); right: 0; position: absolute; display: inline-block;}
@@ -73,7 +73,20 @@
                 .adcontent {display: inline-block; text-align: left; line-height: 30px; font-size: 95px; font-weight: 400; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;}
                 #slide1 {-ms-transform: translateY(5%); transform: translateY(5%);}
                 #slide1 img {width: 375px; height: 450px; display: inline-block;}
-                @keyframes slide {from {left: -900px;}to {left: 18%;}}
+                @keyframes slide {from {left: -1000px;}to {left: 18%;}}
+            }
+            
+            @media only screen and (min-width: 1920px) {
+                /* For tablets: */
+                .logo {background-image: url("logo.png"); background-size: 100px 100px; background-repeat: no-repeat; width: 120px; height: 120px; display: inline-block;}
+                .logo:hover {cursor: pointer;background-size: 105px 105px;}
+                .menicon {background-image: url("menicon.png"); background-size: 30px 30px; width: 30px; height: 30px; -ms-transform: translateY(100%); transform: translateY(100%); right: 0; position: absolute; display: inline-block;}
+                .body {width: 100%;}
+                .slide {position: absolute; animation-name: slide; animation-duration: 3s; animation-fill-mode: forwards;}
+                .adcontent {display: inline-block; text-align: left; line-height: 45px; font-size: 105px; font-weight: 400; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;}
+                #slide1 {-ms-transform: translateY(15%); transform: translateY(15%);}
+                #slide1 img {width: 375px; height: 450px; display: inline-block;}
+                @keyframes slide {from {left: -1000px;}to {left: 25%;}}
             }
         </style>
     </head>
