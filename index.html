@@ -38,13 +38,36 @@
                 top: 20px;
             }
 
-            @media only screen and (min-width: 600px) {
-                /* For tablets: */
+            .adcontent p {
+              opacity: 0;
+              animation-name: fadein;
+              animation-duration: 1s;
+              animation-fill-mode: forwards;
+            }
+
+            #p1 {animation-delay: 3.5s;}
+            #p2 {animation-delay: 4s;}
+            #p3 {animation-delay: 4.5s;}
+
+            @keyframes fadein {
+              from {opacity: 0;} to {opacity: 1;}
+            }
+
+            @media only screen and (min-width: 350px) {
+                /* For smartphones: */
                 .logo {background-image: url("logo.png"); background-size: 75px 75px; background-repeat: no-repeat; width: 90px; height: 90px; display: inline-block;}
                 .logo:hover {cursor: pointer;background-size: 80px 80px;}
                 .menicon {background-image: url("menicon.png"); background-size: 22px 22px; width: 22px; height: 22px; -ms-transform: translateY(100%); transform: translateY(100%); right: 0; position: absolute; display: inline-block;}
                 .body {width: 100%;}
                 .slide {position: absolute; animation-name: slide; animation-duration: 3s; animation-fill-mode: forwards;}
+                .adcontent {display: block; text-align: left; line-height: 10px; font-size: 45px; font-weight: 400; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;}
+                #slide1 {-ms-transform: translateY(10%); transform: translateY(10%);}
+                #slide1 img {width: 190px; height: 228px; display: inline-block;}
+                @keyframes slide {from {left: -425px;}to {left: 25%;}}
+            }
+
+            @media only screen and (min-width: 600px) {
+                /* For tablets: */
                 .adcontent {display: inline-block; text-align: left; line-height: 20px; font-size: 65px; font-weight: 400; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;}
                 #slide1 {-ms-transform: translateY(20%); transform: translateY(20%);}
                 #slide1 img {width: 255px; height: 305px; display: inline-block;}
@@ -56,8 +79,6 @@
                 .logo {background-image: url("logo.png"); background-size: 100px 100px; background-repeat: no-repeat; width: 120px; height: 120px; display: inline-block;}
                 .logo:hover {cursor: pointer;background-size: 105px 105px;}
                 .menicon {background-image: url("menicon.png"); background-size: 30px 30px; width: 30px; height: 30px; -ms-transform: translateY(100%); transform: translateY(100%); right: 0; position: absolute; display: inline-block;}
-                .body {width: 100%;}
-                .slide {position: absolute; animation-name: slide; animation-duration: 3s; animation-fill-mode: forwards;}
                 .adcontent {display: inline-block; text-align: left; line-height: 30px; font-size: 95px; font-weight: 400; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;}
                 #slide1 {-ms-transform: translateY(15%); transform: translateY(15%);}
                 #slide1 img {width: 375px; height: 450px; display: inline-block;}
@@ -66,22 +87,14 @@
 
             @media only screen and (min-width: 1280px) {
                 /* For notebooks: */
-                .adcontent {display: inline-block; text-align: left; line-height: 30px; font-size: 95px; font-weight: 400; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;}
                 #slide1 {-ms-transform: translateY(5%); transform: translateY(5%);}
-                #slide1 img {width: 375px; height: 450px; display: inline-block;}
                 @keyframes slide {from {left: -1000px;}to {left: 18%;}}
             }
 
             @media only screen and (min-width: 1920px) {
                 /* For desktops: */
-                .logo {background-image: url("logo.png"); background-size: 100px 100px; background-repeat: no-repeat; width: 120px; height: 120px; display: inline-block;}
-                .logo:hover {cursor: pointer;background-size: 105px 105px;}
-                .menicon {background-image: url("menicon.png"); background-size: 30px 30px; width: 30px; height: 30px; -ms-transform: translateY(100%); transform: translateY(100%); right: 0; position: absolute; display: inline-block;}
-                .body {width: 100%;}
-                .slide {position: absolute; animation-name: slide; animation-duration: 3s; animation-fill-mode: forwards;}
                 .adcontent {display: inline-block; text-align: left; line-height: 45px; font-size: 105px; font-weight: 400; text-transform: uppercase; font-family: 'Barlow Condensed', sans-serif;}
                 #slide1 {-ms-transform: translateY(15%); transform: translateY(15%);}
-                #slide1 img {width: 375px; height: 450px; display: inline-block;}
                 @keyframes slide {from {left: -1000px;}to {left: 25%;}}
             }
         </style>
@@ -100,9 +113,9 @@
                 <div id="slide1">
                     <img src="data/ad3edit.png" alt="beispiel">
                     <div class="adcontent">
-                        <p>DAS</p>
-                        <p>MODERNE</p>
-                        <p>BIERERLEBNIS</p>
+                        <p id="p1">DAS</p>
+                        <p id="p2">MODERNE</p>
+                        <p id="p3">BIERERLEBNIS</p>
                     </div>
                 </div>
             </div>
